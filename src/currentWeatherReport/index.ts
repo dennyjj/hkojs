@@ -1,10 +1,10 @@
-import { DataType, Lang } from '../enum';
+import { DataType, Lang } from '../enum/enum';
 import { callHkoApi } from '../hkoApi/api';
 
 export async function getCurrentWeatherReport(
   lang?: Lang
 ): Promise<CurrentWeatherReport> {
-  return await callHkoApi(DataType.RHRREAD, lang || Lang.EN);
+  return await callHkoApi(DataType.RHRREAD, lang ?? Lang.EN);
 }
 
 export interface CurrentWeatherReport {

@@ -1,4 +1,4 @@
-import { DataType, Lang } from '../enum';
+import { DataType, Lang } from '../enum/enum';
 
 export async function callHkoApi(dataType: DataType, lang: Lang) {
   const baseApiUrl =
