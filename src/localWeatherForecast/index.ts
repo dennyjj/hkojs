@@ -14,7 +14,7 @@ export async function getLocalWeatherForecast(
 }
 
 /**
- * local weather forecast data returned by the API.
+ * local weather forecast data return by the API.
  */
 export interface localWeatherForecast {
   /** general weather situation */

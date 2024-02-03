@@ -1,14 +1,24 @@
 import { DataType, Lang } from '../enum/enum';
 import { callHkoApi } from '../hkoApi/api';
 
+/**
+ * weather warning summary API
+ *
+ * @param lang - language to use for the API response
+ * @returns promise that resolves to the weather warning summary data
+ */
 export async function getWeatherWarningSummary(
   lang?: Lang
 ): Promise<WeatherWarningSummary> {
   return await callHkoApi(DataType.WARN_SUM, lang ?? Lang.EN);
 }
 
+/**
+ * weather warning summary data return by the API.
+ */
 export type WeatherWarningSummary = {
   [key in WarningStatementCode]: {
+    // TODO doc
     name: string;
     code: string;
     actionCode: string;
@@ -19,15 +29,26 @@ export type WeatherWarningSummary = {
 };
 
 enum WarningStatementCode {
-  WFIRE = 'WFIRE', // Fire Danger Warning
-  WFROST = 'WFROST', // Frost Warning
-  WHOT = 'WHOT', // Hot Weather Warning
-  WCOLD = 'WCOLD', // Cold Weather Warning
-  WMSGNL = 'WMSGNL', // Strong Monsoon Signal
-  WRAIN = 'WRAIN', // Rainstorm Warning Signal
-  WFNTSA = 'WFNTSA', // Special Announcement on Flooding in the northern New Territories
-  WL = 'WL', // Landslip Warning
-  WTCSGNL = 'WTCSGNL', // Tropical Cyclone Warning Signal
-  WTMW = 'WTMW', // Tsunami Warning
+  /** fire danger warning */
+  WFIRE = 'WFIRE',
+  /** frost warning */
+  WFROST = 'WFROST',
+  /** hot weather warning */
+  WHOT = 'WHOT',
+  /** cold weather warning */
+  WCOLD = 'WCOLD',
+  /** strong monsoon warning */
+  WMSGNL = 'WMSGNL',
+  /** rainstorm warning */
+  WRAIN = 'WRAIN',
+  /** special Announcement on flooding in the northern New Territories */
+  WFNTSA = 'WFNTSA',
+  /** landslip warning */
+  WL = 'WL',
+  /** tropical cyclone warning */
+  WTCSGNL = 'WTCSGNL',
+  /** tsunami warning */
+  WTMW = 'WTMW',
+  /** thunderstorm warning */
   WTS = 'WTS', // Thunderstorm Warning
 }
