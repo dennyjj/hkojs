@@ -1,7 +1,7 @@
-import { DataType, Lang } from '../enum/enum';
+import { DataType, Lang } from '../enums';
 
 /**
- * HKO base API
+ * call HKO base API
  *
  * @param dataType - type of data to retrieve from the API
  * @param lang - language to use for the API response

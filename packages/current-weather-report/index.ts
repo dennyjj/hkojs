@@ -1,5 +1,5 @@
-import { DataType, Lang } from '../enum/enum';
-import { callHkoApi } from '../hkoApi/api';
+import { DataType, Lang } from '../enums/enum';
+import { callHkoApi } from '../hko-api/api';
 
 export async function getCurrentWeatherReport(
   lang?: Lang

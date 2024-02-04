@@ -1,8 +1,8 @@
-import { DataType, Lang } from '../enum/enum';
-import { callHkoApi } from '../hkoApi/api';
+import { DataType, Lang } from '../enums/enum';
+import { callHkoApi } from '../hko-api/api';
 
 /**
- * local weather forecast API
+ * get local weather forecast
  *
  * @param lang - language to use for the API response
  * @returns promise that resolves to the local weather forecast data
@@ -17,18 +17,18 @@ export async function getLocalWeatherForecast(
  * local weather forecast data return by the API.
  */
 export interface localWeatherForecast {
-  /** general weather situation */
+  /** general situation */
   generalSituation: string;
   /** tropical cyclone information */
   tcInfo: string;
-  /** fire danger warning */
+  /** fire danger warning message */
   fireDangerWarning: string;
   /** forecast period */
   forecastPeriod: string;
   /** forecast description */
   forecastDesc: string;
-  /** weather outlook */
+  /** outlook */
   outlook: string;
-  /** last update time */
+  /** update time */
   updateTime: string;
 }
