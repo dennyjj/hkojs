@@ -1,7 +1,7 @@
 {
   "name": "hkojs",
-  "version": "0.0.1",
-  "description": "Work with Hong Kong Observatory data",
+  "version": "0.0.2",
+  "description": "Hong Kong Observatory API Wrapper",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/module.js",

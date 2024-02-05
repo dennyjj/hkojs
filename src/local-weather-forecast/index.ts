@@ -1,4 +1,4 @@
-import { DataType, Lang } from '../enums/enum';
+import { DataType, Lang } from '../enums';
 import { callHkoApi } from '../hko-api/api';
 
 /**
