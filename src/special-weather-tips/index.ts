@@ -1,0 +1,14 @@
+import { DataType, Lang } from '../enums';
+import { callHkoApi } from '../hko-api/api';
+
+/**
+ * get special weather tips
+ *
+ * @param lang - language to use for the API response
+ * @returns promise that resolves to the special weather tips data
+ */
+export async function getSpecialWeatherTips(lang?: Lang): Promise<any> {
+  return await callHkoApi(DataType.SWT, lang ?? Lang.EN);
+}
+
+// TODO: types
