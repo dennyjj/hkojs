@@ -11,4 +11,11 @@ export async function getSpecialWeatherTips(lang?: Lang): Promise<any> {
   return await callHkoApi(DataType.SWT, lang ?? Lang.EN);
 }
 
-// TODO: types
+export type SpecialWeatherTips = {
+  swt: {
+    /** tips content */
+    desc: string;
+    /** update time */
+    updateTime: Date;
+  }[];
+};
