@@ -7,7 +7,7 @@ import { callHkoApi } from '../hko-api/api';
  * @param lang - language to use for the API response
  * @returns promise that resolves to the special weather tips data
  */
-export async function getSpecialWeatherTips(lang?: Lang): Promise<any> {
+export async function getSpecialWeatherTips(lang?: Lang): Promise<SpecialWeatherTips> {
   return await callHkoApi(DataType.SWT, lang ?? Lang.EN);
 }
 

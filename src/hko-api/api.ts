@@ -1,3 +1,4 @@
+import { HKO_API_URL } from '../constants';
 import { DataType, Lang } from '../enums';
 
 /**
@@ -8,10 +9,6 @@ import { DataType, Lang } from '../enums';
  * @returns promise that resolves to the HKO data
  */
 export async function callHkoApi(dataType: DataType, lang: Lang): Promise<any> {
-  const baseApiUrl =
-    'https://data.weather.gov.hk/weatherAPI/opendata/weather.php';
-
-  const resp = await fetch(`${baseApiUrl}?dataType=${dataType}&lang=${lang}`);
-
+  const resp = await fetch(`${HKO_API_URL}?dataType=${dataType}&lang=${lang}`);
   return await resp.json();
 }

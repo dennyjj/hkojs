@@ -5,3 +5,4 @@ export * from './weather-warning-summary';
 export * from './weather-warning-information';
 export * from './special-weather-tips';
 export * from './enums';
+export * from './constants'
