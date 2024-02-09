@@ -1,5 +1,7 @@
-## HKOJS
+## hkojs
 
 ---
 
-Working on it.......
+A Hong Kong Observatory API Wrapper
+
+Working...

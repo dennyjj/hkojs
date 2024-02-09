@@ -15,7 +15,7 @@ export async function getWeatherWarningSummary(
 
 /** weather warning summary data return by the API */
 export type WeatherWarningSummary = {
-  [key in WarningStatementCode]: {
+  [key in WarningStatementCode]?: {
     /** warning name */
     name: string;
     /** warning code */
