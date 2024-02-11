@@ -1,11 +1,9 @@
-## hkojs
-
----
+# hkojs
 
 A Hong Kong Observatory API Wrapper
 
-Working...
+---
 
-Getting started
+### Get started
 
 ```npm i hkojs```
