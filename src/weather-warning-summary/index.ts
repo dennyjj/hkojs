@@ -1,5 +1,6 @@
-import { DataType, Lang, WarningStatementCode } from '../enums';
+import { DataType, Lang } from '../enums';
 import { callHkoApi } from '../hko-api/api';
+import { WeatherWarningSummary } from './types';
 
 /**
  * get weather warning summary
@@ -7,26 +8,6 @@ import { callHkoApi } from '../hko-api/api';
  * @param lang - language to use for the API response
  * @returns promise that resolves to the weather warning summary data
  */
-export async function getWeatherWarningSummary(
-  lang?: Lang
-): Promise<WeatherWarningSummary> {
+export async function getWeatherWarningSummary(lang?: Lang): Promise<WeatherWarningSummary> {
   return await callHkoApi(DataType.WARN_SUM, lang ?? Lang.EN);
 }
-
-/** weather warning summary data return by the API */
-export type WeatherWarningSummary = {
-  [key in WarningStatementCode]?: {
-    /** warning name */
-    name: string;
-    /** warning code */
-    code: string;
-    /** action code */
-    actionCode: string;
-    /** issue time */
-    issueTime: string;
-    /** update time */
-    updateTime: string;
-    /** expire time */
-    expireTime?: string;
-  };
-};

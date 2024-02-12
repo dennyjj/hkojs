@@ -1,5 +1,6 @@
 import { DataType, Lang } from '../enums';
 import { callHkoApi } from '../hko-api/api';
+import { HkoLocalWeatherForecast, GetLocalWeatherForecastResponse } from './types';
 
 /**
  * get local weather forecast
@@ -7,28 +8,20 @@ import { callHkoApi } from '../hko-api/api';
  * @param lang - language to use for the API response
  * @returns promise that resolves to the local weather forecast data
  */
-export async function getLocalWeatherForecast(
-  lang?: Lang
-): Promise<localWeatherForecast> {
-  return await callHkoApi(DataType.FLW, lang ?? Lang.EN);
-}
+export async function getLocalWeatherForecast(lang?: Lang): Promise<GetLocalWeatherForecastResponse> {
+  const { generalSituation, tcInfo, fireDangerWarning, forecastPeriod, forecastDesc, outlook, updateTime } =
+    await callHkoApi<HkoLocalWeatherForecast>(DataType.FLW, lang ?? Lang.EN);
 
-/**
- * local weather forecast data return by the API.
- */
-export interface localWeatherForecast {
-  /** general situation */
-  generalSituation: string;
-  /** tropical cyclone information */
-  tcInfo: string;
-  /** fire danger warning message */
-  fireDangerWarning: string;
-  /** forecast period */
-  forecastPeriod: string;
-  /** forecast description */
-  forecastDesc: string;
-  /** outlook */
-  outlook: string;
-  /** update time */
-  updateTime: string;
+  const resp: GetLocalWeatherForecastResponse = {
+    generalSituation,
+    forecastPeriod,
+    forecastDescription: forecastDesc,
+    outlook,
+    updateTime,
+  };
+
+  if (tcInfo) resp.tropicalCycloneInfo = tcInfo;
+  if (fireDangerWarning) resp.fireDangerWarning = fireDangerWarning;
+
+  return resp;
 }
