@@ -22,5 +22,7 @@ jobs:
 
       - name: Build
         run: |
+          pwd
+          ls -la
           npm ci
           npm run build
