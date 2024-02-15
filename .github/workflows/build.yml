@@ -1,5 +1,3 @@
-name: NodeJS with Grunt
-
 on:
   push:
     branches: ['master']
@@ -10,19 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: ['18']
-
     steps:
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Build
-        run: |
-          pwd
-          ls -la
-          npm ci
-          npm run build
+          node-version: 18
+      - run: npm ci
+      - run: npm run build
