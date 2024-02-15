@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup node
         uses: actions/setup-node@v4
         with:
           node-version: 18
@@ -22,3 +22,6 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Test
+        run: echo "there is nothing to test...yet"
