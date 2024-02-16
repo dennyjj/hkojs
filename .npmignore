@@ -1,7 +1,6 @@
 node_modules/
 .parcel-cache/
 TODO.md
-Makefile
 .prettierrc
 .prettierignore
 .github/

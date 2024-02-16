@@ -37,3 +37,20 @@ export interface GetLocalWeatherForecastResponse {
   /** update time */
   updateTime: string;
 }
+
+export function toGetLocalWeatherForecastResponse(data: HkoLocalWeatherForecast): GetLocalWeatherForecastResponse {
+  const { generalSituation, tcInfo, fireDangerWarning, forecastPeriod, forecastDesc, outlook, updateTime } = data;
+
+  const resp: GetLocalWeatherForecastResponse = {
+    generalSituation,
+    forecastPeriod,
+    outlook,
+    updateTime,
+    forecastDescription: forecastDesc,
+  };
+
+  if (tcInfo) resp.tropicalCycloneInfo = tcInfo;
+  if (fireDangerWarning) resp.fireDangerWarning = fireDangerWarning;
+
+  return resp;
+}

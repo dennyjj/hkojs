@@ -1,8 +1,6 @@
 on:
   push:
     branches: ['master']
-  pull_request:
-    branches: ['master']
 
 jobs:
   build:
@@ -21,7 +19,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build
+        run: make build
 
       - name: Test
         run: echo "there is nothing to test...yet"

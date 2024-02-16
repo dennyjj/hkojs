@@ -2,7 +2,6 @@ node_modules/
 .parcel-cache/
 dist/
 TODO.md
-Makefile
 .vscode
 .prettierrc
 .prettierignore
