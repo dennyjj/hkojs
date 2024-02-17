@@ -20,5 +20,5 @@ export enum WarningStatementCode {
   /** tsunami warning */
   WTMW = 'WTMW',
   /** thunderstorm warning */
-  WTS = 'WTS', // Thunderstorm Warning
+  WTS = 'WTS', 
 }
