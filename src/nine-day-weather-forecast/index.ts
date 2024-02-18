@@ -7,9 +7,7 @@ import { callHkoApi } from '../hko-api/api';
  * @param lang - language to use for the API response
  * @returns promise that resolves to the local weather forecast data
  */
-export async function getNineDayWeatherForecast(
-  lang?: Lang
-): Promise<NineDayWeatherForecast> {
+export async function getNineDayWeatherForecast(lang?: Lang): Promise<NineDayWeatherForecast> {
   return await callHkoApi(DataType.FND, lang ?? Lang.EN);
 }
 
