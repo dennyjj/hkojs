@@ -4,3 +4,7 @@ build:
 
 publish: 
 	npm publish
+
+all:
+	make build
+	make publish
