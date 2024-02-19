@@ -9,5 +9,5 @@ import { WeatherWarningSummary } from './types';
  * @returns promise that resolves to the weather warning summary data
  */
 export async function getWeatherWarningSummary(lang?: Lang): Promise<WeatherWarningSummary> {
-  return await callHkoApi(DataType.WARN_SUM, lang ?? Lang.EN);
+  return await callHkoApi<WeatherWarningSummary>(DataType.WARN_SUM, lang ?? Lang.EN);
 }

@@ -31,7 +31,7 @@ export interface RainfallData extends StartEndTime {
     main: 'TRUE' | 'FALSE';
     /** maximum rainfall record */
     max?: string;
-    /** maximum rainfall record */
+    /** minimum rainfall record */
     min?: string;
   };
 }
