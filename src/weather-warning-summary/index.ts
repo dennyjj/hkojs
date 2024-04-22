@@ -1,4 +1,4 @@
-import { DataType, Lang } from '../enums';
+import { DataType, Lang } from '../constants';
 import { callHkoApi } from '../hko-api/api';
 import { WeatherWarningSummary } from './types';
 

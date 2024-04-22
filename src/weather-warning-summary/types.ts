@@ -1,4 +1,4 @@
-import { WarningStatementCode } from '../enums';
+import { WarningStatementCode } from '../constants';
 
 /** weather warning summary data return by the API */
 export type WeatherWarningSummary = {

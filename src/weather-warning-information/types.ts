@@ -1,4 +1,4 @@
-import { WarningStatementCode } from '../enums';
+import { WarningStatementCode } from '../constants';
 
 /** get weather warning information response */
 export type GetWeatherWarningInformationResponse = {

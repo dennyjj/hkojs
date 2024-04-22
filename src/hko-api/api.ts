@@ -1,5 +1,5 @@
 import { HKO_API_URL } from '../constants';
-import { DataType, Lang } from '../enums';
+import { DataType, Lang } from '../constants';
 
 /**
  * call HKO base API
