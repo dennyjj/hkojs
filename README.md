@@ -7,6 +7,7 @@ A Hong Kong Observatory API Wrapper
 ### Get started
 
 `npm i hkojs`
+
 `yarn add hkojs`
 
 ---
