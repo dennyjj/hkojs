@@ -8,8 +8,6 @@ Hong Kong Observatory API Wrapper
 
 `npm i hkojs`
 
-`yarn add hkojs`
-
 ---
 
 #### Dataset
@@ -33,7 +31,7 @@ import { Lang, getLocalWeatherForecast } from 'hkojs';
   console.log(forecast);
 })();
 
-/* Responsel
+/* Response
 {
   generalSituation: 'A maritime airstream is affecting the coastal areas of Guangdong.',
   forecastPeriod: 'Weather forecast for tonight and tomorrow',
