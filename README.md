@@ -1,6 +1,6 @@
 # hkojs
 
-A Hong Kong Observatory API Wrapper
+Hong Kong Observatory API Wrapper
 
 ---
 

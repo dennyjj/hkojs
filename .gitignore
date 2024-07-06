@@ -3,5 +3,3 @@ node_modules/
 dist/
 TODO.md
 .vscode
-.prettierrc
-.prettierignore
