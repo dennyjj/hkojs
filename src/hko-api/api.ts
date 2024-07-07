@@ -10,5 +10,5 @@ import { DataType, Lang } from '../constants';
  */
 export async function callHkoApi<T>(dataType: DataType, lang: Lang): Promise<T> {
   const resp = await fetch(`${HKO_API_URL}?dataType=${dataType}&lang=${lang}`);
-  return await resp.json();
+  return resp.json();
 }

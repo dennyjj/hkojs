@@ -1,6 +1,6 @@
 import { WarningStatementCode } from '../constants';
 
-/** weather warning summary data return by the API */
+/** weather warning summary */
 export type WeatherWarningSummary = {
   [key in WarningStatementCode]?: {
     /** warning name */
@@ -8,7 +8,7 @@ export type WeatherWarningSummary = {
     /** warning code */
     code: string;
     /** action code */
-    actionCode: 'ISSUE' | 'REISSUE' | 'CANCEL' | 'EXTEND' | 'UPDATE';
+    actionCode: ActionCode;
     /** issue time */
     issueTime: string;
     /** update time */
@@ -17,3 +17,11 @@ export type WeatherWarningSummary = {
     expireTime?: string;
   };
 };
+
+export enum ActionCode {
+  ISSUE = 'ISSUE',
+  REISSUE = 'REISSUE',
+  CANCEL = 'CANCEL',
+  EXTEND = 'EXTEND',
+  UPDATE = 'UPDATE',
+}

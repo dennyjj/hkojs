@@ -10,7 +10,5 @@ import { HkoLocalWeatherForecast, GetLocalWeatherForecastResponse, toGetLocalWea
  */
 export async function getLocalWeatherForecast(lang?: Lang): Promise<GetLocalWeatherForecastResponse> {
   const data = await callHkoApi<HkoLocalWeatherForecast>(DataType.FLW, lang ?? Lang.EN);
-
-  const resp = toGetLocalWeatherForecastResponse(data);
-  return resp;
+  return toGetLocalWeatherForecastResponse(data);
 }

@@ -41,7 +41,7 @@ export interface GetLocalWeatherForecastResponse {
 export function toGetLocalWeatherForecastResponse(data: HkoLocalWeatherForecast): GetLocalWeatherForecastResponse {
   const { generalSituation, tcInfo, fireDangerWarning, forecastPeriod, forecastDesc, outlook, updateTime } = data;
 
-  const resp: GetLocalWeatherForecastResponse = {
+  const response: GetLocalWeatherForecastResponse = {
     generalSituation,
     forecastPeriod,
     outlook,
@@ -49,8 +49,8 @@ export function toGetLocalWeatherForecastResponse(data: HkoLocalWeatherForecast)
     forecastDescription: forecastDesc,
   };
 
-  if (tcInfo) resp.tropicalCycloneInfo = tcInfo;
-  if (fireDangerWarning) resp.fireDangerWarning = fireDangerWarning;
+  if (tcInfo) response.tropicalCycloneInfo = tcInfo;
+  if (fireDangerWarning) response.fireDangerWarning = fireDangerWarning;
 
-  return resp;
+  return response;
 }

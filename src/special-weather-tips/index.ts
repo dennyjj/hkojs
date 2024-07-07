@@ -1,5 +1,6 @@
 import { DataType, Lang } from '../constants';
 import { callHkoApi } from '../hko-api/api';
+import { SpecialWeatherTips } from './types';
 
 /**
  * get special weather tips
@@ -8,14 +9,5 @@ import { callHkoApi } from '../hko-api/api';
  * @returns promise that resolves to the special weather tips data
  */
 export async function getSpecialWeatherTips(lang?: Lang): Promise<SpecialWeatherTips> {
-  return await callHkoApi(DataType.SWT, lang ?? Lang.EN);
+  return callHkoApi(DataType.SWT, lang ?? Lang.EN);
 }
-
-export type SpecialWeatherTips = {
-  swt: {
-    /** tips content */
-    desc: string;
-    /** update time */
-    updateTime: Date;
-  }[];
-};

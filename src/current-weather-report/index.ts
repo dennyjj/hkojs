@@ -9,5 +9,5 @@ import { CurrentWeatherReport } from './types';
  * @returns promise that resolves to the current weather report data
  */
 export async function getCurrentWeatherReport(lang?: Lang): Promise<CurrentWeatherReport> {
-  return await callHkoApi(DataType.RHRREAD, lang ?? Lang.EN);
+  return callHkoApi(DataType.RHRREAD, lang ?? Lang.EN);
 }

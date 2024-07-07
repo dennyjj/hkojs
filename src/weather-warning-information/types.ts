@@ -1,7 +1,7 @@
 import { WarningStatementCode } from '../constants';
 
-/** get weather warning information response */
-export type GetWeatherWarningInformationResponse = {
+/** weather warning information */
+export interface WeatherWarningInformation {
   details?: {
     /** list of contents */
     contents: string[];
@@ -12,4 +12,4 @@ export type GetWeatherWarningInformationResponse = {
     /** update time */
     updateTime: Date;
   }[];
-};
+}
