@@ -1,6 +1,6 @@
 # hkojs
 
-Hong Kong Observatory API Wrapper
+Hong Kong Observatory API Wrapper for TypeScript (Sorry for no JS compatibility yet despite of the name hkojs)
 
 ---
 

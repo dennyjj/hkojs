@@ -1,4 +1,4 @@
-import { WarningStatementCode } from '../constants';
+import { WarningStatementCode } from '../enums/warningStatementCode';
 
 /** weather warning information */
 export interface WeatherWarningInformation {
