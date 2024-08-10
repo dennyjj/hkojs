@@ -20,7 +20,7 @@
   "author": "Dennis Chan",
   "repository": {
     "type": "git",
-    "url": "https://github.com/deccm/hkojs.git"
+    "url": "https://github.com/dennyjj/hkojs.git"
   },
   "license": "ISC",
   "devDependencies": {
