@@ -10,7 +10,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "parcel build"
+    "build": "parcel build",
+    "format": "prettier --write ."
   },
   "keywords": [
     "HKO",
