@@ -7,6 +7,7 @@ Hong Kong Observatory API Wrapper for TypeScript (Sorry for no JS compatibility 
 ### Get started
 
 `npm i hkojs`
+`yarn add hkojs`
 
 ---
 
